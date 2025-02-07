@@ -1,11 +1,5 @@
-import { useState } from "react";
-
-const Counter = () => {
-  const [count, setCount] = useState(0);
-
-  const decrement = () => setCount((prevCount) => prevCount - 1);
-  const increment = () => setCount((prevCount) => prevCount + 1);
-
+const Counter = ({ count, decrement, increment }) => {
+  //console.info('count:', count); //prop -estado- pasada de App.jsx
   return (
     <div className="counter-container">
       <p className="counter-value">{count}</p>
